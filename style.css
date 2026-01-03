@@ -1,27 +1,136 @@
 :root {
-    --primary: #075e54; /* WhatsApp Dark Green */
-    --secondary: #25d366; /* WhatsApp Light Green */
-    --bg: #f0f2f5;
+    --primary: #075e54;
+    --secondary: #25d366;
+    --light: #f0f2f5;
+    --white: #ffffff;
 }
 
-body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; }
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: var(--light);
+}
 
-.top-nav { display: flex; justify-content: space-between; padding: 15px 5%; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); sticky: top; }
-.logo { font-weight: bold; font-size: 1.5rem; color: var(--primary); }
-.logo span { color: var(--secondary); }
+/* --- AUTHENTICATION STYLING --- */
+#authSection {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary), #000);
+}
 
-header { background: var(--primary); color: white; padding: 50px 20px; text-align: center; }
-.container { max-width: 700px; margin: -30px auto 50px; padding: 0 20px; }
-.card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+.auth-card {
+    background: var(--white);
+    padding: 35px;
+    border-radius: 20px;
+    width: 350px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.auth-card h2 span { color: var(--secondary); }
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.auth-form input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.main-btn {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.main-btn:hover { background: #128c7e; }
+
+.toggle-link {
+    margin-top: 15px;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* --- MAIN APP STYLING --- */
+.navbar {
+    background: white;
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .logo { font-size: 24px; font-weight: 800; color: var(--primary); }
+.navbar .logo span { color: var(--secondary); }
+
+#userDisplay { font-weight: 600; color: #555; margin-right: 15px; }
+
+.logout-btn {
+    background: #fee2e2;
+    color: #dc2626;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.post-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
 
 .form-grid { display: flex; flex-direction: column; gap: 10px; }
-input { padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none; }
+.form-grid input { padding: 12px; border: 1px solid #ddd; border-radius: 8px; }
 
-.btn-main { background: var(--primary); color: white; border: none; padding: 15px; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 16px; }
-.btn-main:hover { background: #128c7e; }
+.trade-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 6px solid var(--secondary);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
 
-.trade-card { display: flex; justify-content: space-between; align-items: center; background: white; padding: 20px; margin-bottom: 12px; border-radius: 10px; border-left: 6px solid var(--secondary); }
-.action-buttons { display: flex; gap: 8px; }
+.trade-info b { color: var(--primary); font-size: 1.1em; }
 
-.connect-btn { background: var(--secondary); color: white; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-weight: bold; display: flex; align-items: center; gap: 5px; }
-.cancel-btn { background: #fee2e2; color: #dc2626; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; }
+.whatsapp-btn {
+    background: var(--secondary);
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+}

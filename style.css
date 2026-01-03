@@ -1,0 +1,27 @@
+:root {
+    --primary: #075e54; /* WhatsApp Dark Green */
+    --secondary: #25d366; /* WhatsApp Light Green */
+    --bg: #f0f2f5;
+}
+
+body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; }
+
+.top-nav { display: flex; justify-content: space-between; padding: 15px 5%; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); sticky: top; }
+.logo { font-weight: bold; font-size: 1.5rem; color: var(--primary); }
+.logo span { color: var(--secondary); }
+
+header { background: var(--primary); color: white; padding: 50px 20px; text-align: center; }
+.container { max-width: 700px; margin: -30px auto 50px; padding: 0 20px; }
+.card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+
+.form-grid { display: flex; flex-direction: column; gap: 10px; }
+input { padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none; }
+
+.btn-main { background: var(--primary); color: white; border: none; padding: 15px; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 16px; }
+.btn-main:hover { background: #128c7e; }
+
+.trade-card { display: flex; justify-content: space-between; align-items: center; background: white; padding: 20px; margin-bottom: 12px; border-radius: 10px; border-left: 6px solid var(--secondary); }
+.action-buttons { display: flex; gap: 8px; }
+
+.connect-btn { background: var(--secondary); color: white; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-weight: bold; display: flex; align-items: center; gap: 5px; }
+.cancel-btn { background: #fee2e2; color: #dc2626; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; }

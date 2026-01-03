@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap | Real WhatsApp Connect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="logo">Skill<span>Swap</span></div>
+        <div class="history-pill">
+            <i class="fas fa-users"></i> Local Members: <span id="historyCount">0</span>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Connect with Neighbors</h1>
+        <p>Direct chat on WhatsApp for faster swapping!</p>
+    </header>
+
+    <div class="container">
+        <section class="card post-section">
+            <h3>Post Your Skill</h3>
+            <div class="form-grid">
+                <input type="text" id="userName" placeholder="Your Name">
+                <input type="number" id="userPhone" placeholder="WhatsApp Number (e.g. 919876543210)">
+                <input type="text" id="skillOffer" placeholder="What skill do you HAVE?">
+                <input type="text" id="skillNeed" placeholder="What skill do you NEED?">
+                <button onclick="addTrade()" class="btn-main">Post to Neighborhood</button>
+            </div>
+        </section>
+
+        <h2 class="feed-title">Active Swaps Near You</h2>
+        <div id="tradeFeed" class="feed"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
